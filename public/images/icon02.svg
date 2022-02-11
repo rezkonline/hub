@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.899" height="20.456" viewBox="0 0 23.899 20.456">
+  <g id="Group_5000" data-name="Group 5000" transform="translate(0.5 0.5)">
+    <path id="Path_1980" data-name="Path 1980" d="M180.693,366.193h-2.249a2.544,2.544,0,0,0-2.544,2.544v10.507a2.544,2.544,0,0,0,2.544,2.544h3.991a2.544,2.544,0,0,1,1.8.746l3.116,3.115,3.116-3.115a2.544,2.544,0,0,1,1.8-.746h3.991a2.544,2.544,0,0,0,2.544-2.544V368.737a2.544,2.544,0,0,0-2.544-2.544H183.8" transform="translate(-175.899 -366.193)" fill="none" stroke="#262628" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_4985" data-name="Group 4985" transform="translate(5.667 7.872)">
+      <ellipse id="Ellipse_417" data-name="Ellipse 417" cx="0.319" cy="0.333" rx="0.319" ry="0.333" transform="translate(11.381)" fill="none" stroke="#fd5454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <ellipse id="Ellipse_418" data-name="Ellipse 418" cx="0.319" cy="0.333" rx="0.319" ry="0.333" stroke-width="2" stroke="#fd5454" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <ellipse id="Ellipse_419" data-name="Ellipse 419" cx="0.319" cy="0.333" rx="0.319" ry="0.333" transform="translate(5.691)" fill="none" stroke="#fd5454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
