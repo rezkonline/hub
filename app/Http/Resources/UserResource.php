@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Laraeast\LaravelSettings\Facades\Settings;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserResource extends JsonResource
@@ -18,7 +19,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'phone' => $this->phone,
+            'phone' => $this->isSupervisor() ? Settings::get('phone', $this->phone) : $this->phone,
             'manager_id' => $this->manager_id,
             'employee_id' => $this->employee_id,
             'type' => $this->type,

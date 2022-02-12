@@ -1,4 +1,5 @@
 {{ BsForm::text('title', Settings::get('title')) }}
+{{ BsForm::text('phone', Settings::get('phone')) }}
 {{ BsForm::text('copyright', Settings::get('copyright')) }}
 {{ BsForm::text('facebook', Settings::get('facebook')) }}
 {{ BsForm::text('twitter', Settings::get('twitter')) }}
