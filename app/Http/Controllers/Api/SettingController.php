@@ -9,6 +9,16 @@ use Laraeast\LaravelSettings\Facades\Settings;
 class SettingController extends Controller
 {
     /**
+     * The list of the files keys.
+     *
+     * @var array
+     */
+    protected $files = [
+        'logo',
+        'favicon',
+    ];
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -18,7 +28,15 @@ class SettingController extends Controller
         $data = [];
 
         foreach (array_keys(trans('settings.attributes')) as $key) {
+            if (in_array($key, $files)) {
+                continue;
+            }
+
             $data[$key] = Settings::get($key, null);
+        }
+
+        foreach ($this->files as $file) {
+            $data[$file] = Settings::instance($file)->getFirstMediaUrl($file);
         }
 
         return response()->json(array_merge($data, [
