@@ -28,7 +28,7 @@ class SettingController extends Controller
         $data = [];
 
         foreach (array_keys(trans('settings.attributes')) as $key) {
-            if (in_array($key, $files)) {
+            if (in_array($key, $this->files)) {
                 continue;
             }
 
