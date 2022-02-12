@@ -4,14 +4,12 @@
     <section class="pt-4">
         <div class="container">
             <div class="row">
-                @if(session('status'))
-                    <div class="col-md-12">
-                        <div class="alert alert-success mt-4 text-center" role="alert">
+                <div class="auth-form col-md-6 col-sm-12">
+                    @if(session('status'))
+                        <div class="alert alert-success mb-4 text-center" role="alert">
                             {{ session('status') }}
                         </div>
-                    </div>
-                @endif
-                <div class="auth-form col-md-6 col-sm-12">
+                    @endif
                     <div class="d-flex align-items-left justify-content-left mb-3 mb-lg-4">
                         <img class="img-h75 mb-0" src="{{ asset('images/logo.png') }}" alt="@lang('adminlte.auth.forget.info')">
                     </div>
