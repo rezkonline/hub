@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'use_cache' => true,
+    'use_cache' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -51,5 +51,5 @@ return [
     |
     */
 
-    'model_class' => \App\Models\Setting::class,
+    'model_class' => App\Models\Setting::class,
 ];
