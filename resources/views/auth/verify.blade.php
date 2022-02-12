@@ -1,4 +1,4 @@
-@extends('layouts.frontend', ['title' => trans('adminlte.auth.login.title'), 'class' => 'homepage', 'header' => false])
+@extends('layouts.frontend', ['title' => trans('verifications.email.title'), 'class' => 'homepage', 'header' => false])
 
 @section('content')
     <section class="pt-4">
