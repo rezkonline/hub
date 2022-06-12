@@ -19,27 +19,6 @@ class CityController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @param \App\Http\Filters\CityFilter $filter
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function index(CityFilter $filter)
-    {
-        return view('dashboard.cities.index', compact('cities', 'countries'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function create()
-    {
-        return view('dashboard.cities.create', compact('countries'));
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param \App\Http\Requests\Dashboard\CityRequest $request

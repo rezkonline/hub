@@ -36,7 +36,7 @@ class SettingController extends Controller
         }
 
         foreach ($this->files as $file) {
-            $data[$file] = Settings::instance($file)->getFirstMediaUrl($file);
+            $data[$file] = optional(Settings::instance($file))->getFirstMediaUrl($file);
         }
 
         return response()->json(array_merge($data, [

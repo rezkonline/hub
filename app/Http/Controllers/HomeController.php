@@ -16,6 +16,7 @@ class HomeController extends Controller
         if (auth()->user() && auth()->user()->canAccessDashboard()) {
             return redirect(RouteServiceProvider::DASHBOARD);
         }
+
         return view('home');
     }
 
@@ -28,6 +29,6 @@ class HomeController extends Controller
     {
         session()->put('locale', $localeCode);
 
-        return redirect()->route('welcome');
+        return redirect()->route('home');
     }
 }

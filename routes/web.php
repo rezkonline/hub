@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('lang/{lang}', 'HomeController@lang')->name('lang');
+Route::get('locale/{lang}', 'HomeController@lang')->name('lang');
 
 Route::get('email/verify', 'VerificationController@email')->middleware('auth')->name('verification.notice');
 Route::get('email/verify/{id}/{hash}', 'VerificationController@markEmailAsVerified')->middleware(['auth', 'signed'])->name('verification.verify');

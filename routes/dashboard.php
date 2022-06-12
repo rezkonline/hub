@@ -30,15 +30,16 @@ Route::prefix('users/{user}')->name('users.')->group(function () {
 Route::resources([
     'users' => 'UserController',
     'countries' => 'CountryController',
-    'cities' => 'CityController',
     'packages' => 'PackageController',
 ]);
 
+Route::resource('cities', 'CityController')->except('index', 'create', 'store');
+
 $routes = ['tasks', 'campaigns', 'schedules'];
 
-foreach ($routes as $route) {
-    Route::resource($route, Str::ucfirst(Str::singular($route)) . 'Controller')->only(['index', 'show', 'destroy']);
-}
+Route::resource('tasks', 'TaskController')->only(['index', 'show', 'destroy']);
+Route::resource('campaigns', 'CampaignController')->only(['index', 'show', 'destroy']);
+Route::resource('schedules', 'TaskController')->only(['index', 'show', 'destroy']);
 
 Route::resource('settings', 'SettingController')->only(['index', 'store']);
 

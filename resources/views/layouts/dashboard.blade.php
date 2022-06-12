@@ -10,21 +10,12 @@
     @endcomponent
 
     @include('dashboard.users.partials.actions.sidebar')
-
     @include('dashboard.countries.partials.actions.sidebar')
-
-    @include('dashboard.cities.partials.actions.sidebar')
-
     @include('dashboard.packages.partials.actions.sidebar')
-
     @include('dashboard.tasks.partials.actions.sidebar')
-
     @include('dashboard.campaigns.partials.actions.sidebar')
-
     @include('dashboard.schedules.partials.actions.sidebar')
-
     @include('dashboard.reports.partials.actions.sidebar')
-
     @include('dashboard.settings.partials.actions.sidebar')
 
 @endsection
