@@ -2,6 +2,6 @@
 
 return [
     'auth' => [
-        'logout' => 'Successful logout',
+        'logout' => 'You have logged out successfully.',
     ],
 ];

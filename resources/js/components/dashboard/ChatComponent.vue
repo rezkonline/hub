@@ -62,7 +62,7 @@
                 scrollTop: 9999
             }, 1000)
 
-            Echo.private('chat.' + this.$store.state.user.id)
+            window.Echo.private('chat.' + this.$store.state.user.id)
                 .listen('MessageSentEvent', (e) => {
                     this.messages.push(e)
                 })

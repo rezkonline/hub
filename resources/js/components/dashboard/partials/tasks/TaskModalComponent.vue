@@ -178,7 +178,7 @@
 
                 this.getComments();
 
-                Echo.private('tasks.' + this.task.id)
+                window.Echo.private('tasks.' + this.task.id)
                     .listen('CommentCreated', (e) => {
                         app.comments.unshift(e.comment);
                     });

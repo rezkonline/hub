@@ -1,5 +1,5 @@
-const mix = require('laravel-mix'),
-    WebpackRTLPlugin = require('webpack-rtl-plugin');
+const mix = require('laravel-mix')
+const WebpackRTLPlugin = require('webpack-rtl-plugin');
 
 require('laravel-mix-merge-manifest');
 

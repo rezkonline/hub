@@ -13,6 +13,7 @@ return [
         'delete' => 'Delete Package',
         'save' => 'Save',
         'filter' => 'Filter',
+        'subscription' => 'Subscribe to the package',
     ],
     'messages' => [
         'created' => 'The package has been created successfully.',
@@ -21,6 +22,7 @@ return [
     ],
     'attributes' => [
         'name' => 'Package name',
+        '%name%' => 'Package name',
         'price' => 'Package price',
     ],
     'dialogs' => [

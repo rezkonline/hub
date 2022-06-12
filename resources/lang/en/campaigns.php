@@ -4,7 +4,8 @@ return [
     'plural' => 'Campaigns',
     'singular' => 'CampaignResource',
     'empty' => 'There are no campaigns',
-    'perPage' => 'Count Campaigns Per Page',
+    'perPage' => 'Campaigns Per Page',
+    'select' => 'Select a campaign',
     'actions' => [
         'list' => 'List Campaigns',
         'show' => 'Show Campaigns',
@@ -26,10 +27,12 @@ return [
         'target' => 'Target',
         'status' => 'Status',
         'budget' => 'Budget',
+        'attachments' => 'Attachments',
+        'created_at' => 'Created At',
     ],
     'types' => [
         \App\Models\Campaign::COMPLETED_STATUS => 'Completed',
-        \App\Models\Campaign::ONGOING_STATUS => 'Ongoing',
+        \App\Models\Campaign::ONGOING_STATUS => 'Proccessing',
     ],
     'dialogs' => [
         'delete' => [

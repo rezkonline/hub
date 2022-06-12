@@ -4,6 +4,7 @@ return [
     'plural' => 'Tasks',
     'singular' => 'Task',
     'empty' => 'There are no tasks',
+    'select' => 'Select a task',
     'perPage' => 'Count Tasks Per Page',
     'actions' => [
         'list' => 'List Tasks',
@@ -24,6 +25,8 @@ return [
         'description' => 'Description',
         'status' => 'Status',
         'customer_id' => 'Customer',
+        'attachments' => 'Attachments',
+        'created_at' => 'Created At',
     ],
     'types' => [
         \App\Models\Task::COMPLETED_STATUS => 'Completed',

@@ -12,7 +12,12 @@
         <title>{{ isset($title) ? $title .' | '. Settings::get('title', config('app.name')) : Settings::get('title', config('app.name')) }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="{{ asset(mix('css/app.css')) }}">
+        @if(Locales::getDir() == 'rtl')
+            <link rel="stylesheet" href="{{ asset('/css/app.rtl.css') }}">
+        @else
+            <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+        @endif
+
         @stack('styles')
     </head>
     <body class="{{ $class ?? '' }}">

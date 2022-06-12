@@ -178,7 +178,7 @@
 
                 this.getComments();
 
-                Echo.private('schedules.' + this.schedule.id)
+                window.Echo.private('schedules.' + this.schedule.id)
                     .listen('CommentCreated', (e) => {
                         app.comments.unshift(e.comment);
                     });

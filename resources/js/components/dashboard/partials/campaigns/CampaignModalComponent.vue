@@ -198,7 +198,7 @@
 
                 this.getComments();
 
-                Echo.private('campaigns.' + this.campaign.id)
+                window.Echo.private('campaigns.' + this.campaign.id)
                     .listen('CommentCreated', (e) => {
                         app.comments.unshift(e.comment);
                     });

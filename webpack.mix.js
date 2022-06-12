@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const WebpackRTLPlugin = require('webpack-rtl-plugin');
 
 require('laravel-mix-merge-manifest');
 
@@ -16,5 +17,15 @@ require('laravel-mix-merge-manifest');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .vue();
+
+// Handle rtl
+mix.webpackConfig({
+    plugins: [
+        new WebpackRTLPlugin({
+            diffOnly: false,
+            minify: true,
+        }),
+    ],
+});
 
 mix.mergeManifest();

@@ -136,7 +136,7 @@
             this.notifications = this.$store.state.user.notifications;
             this.notificationsLength = this.notifications.length;
 
-            Echo.private('App.Models.User.' + this.$store.state.user.id)
+            window.Echo.private('App.Models.User.' + this.$store.state.user.id)
                 .notification((e) => {
                     this.notifications.push(e);
                     this.notificationsLength += 1;

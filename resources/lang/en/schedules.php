@@ -4,6 +4,7 @@ return [
     'plural' => 'Schedules',
     'singular' => 'Schedule',
     'empty' => 'There are no schedules',
+    'select' => 'Select a schedule',
     'perPage' => 'Count Schedules Per Page',
     'actions' => [
         'list' => 'List Schedules',
@@ -24,6 +25,8 @@ return [
         'description' => 'Description',
         'status' => 'Status',
         'customer_id' => 'Customer',
+        'attachments' => 'Attachments',
+        'created_at' => 'Created At',
     ],
     'types' => [
         \App\Models\Schedule::COMPLETED_STATUS => 'Completed',

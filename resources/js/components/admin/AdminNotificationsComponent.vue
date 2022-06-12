@@ -59,7 +59,7 @@ export default {
       this.axios.get('/api/user')
           .then(response => {
             this.auth = response.data.data;
-            Echo.join(`App.Models.User.${this.auth.id}`)
+            window.Echo.join(`App.Models.User.${this.auth.id}`)
                 .listenToAll(() => {
                   this.getUnreadNotifications();
                 })

@@ -668,7 +668,8 @@ export default {
                 "youtube": "رابط يوتيوب",
                 "contact_us_link": "رابط التواصل",
                 "logo": "شعار الموقع",
-                "favicon": "الصورة المصغرة"
+                "favicon": "الصورة المصغرة",
+                "phone": "رقم الهاتف الإفتراضي"
             },
             "messages": {
                 "updated": "تم تعديل الاعدادات بنجاح ."
@@ -935,6 +936,14 @@ export default {
                 }
             },
             "attributes": []
+        },
+        "verifications": {
+            "email": {
+                "title": "باقي خطوة!",
+                "description": "لإتمام عضويتك معنا في رزق اون لاين.. كرمًا اضغط على رابط تفعيل حسابك الذي وصلك على إيميلك.",
+                "success": "تم إعادة إرسال رسالة التفعيل إلى بريدكم الإلكتروني",
+                "resend": "أعد إرسال بريد التفعيل"
+            }
         }
     },
     "en": {
@@ -1014,9 +1023,72 @@ export default {
                 }
             }
         },
+        "admins": {
+            "plural": "Admins",
+            "singular": "Admin",
+            "empty": "There are no admins",
+            "select": "Select admin",
+            "select-type": "All",
+            "perPage": "Admins per page",
+            "actions": {
+                "list": "List admins",
+                "show": "Show",
+                "create": "Create new admin",
+                "edit": "Edit Admin",
+                "delete": "Remove Admin",
+                "save": "Save",
+                "filter": "Filter"
+            },
+            "messages": {
+                "created": "Admin has been created successfully .",
+                "updated": "Admin has been updated successfully .",
+                "deleted": "Admin has been deleted successfully ."
+            },
+            "attributes": {
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone",
+                "password": "Password",
+                "password_confirmation": "Password confirmation",
+                "avatar": "Avatar"
+            },
+            "dialogs": {
+                "delete": {
+                    "title": "Alert !",
+                    "info": "Are you sure you want to delete this admin ?",
+                    "confirm": "Delete",
+                    "cancel": "Cancel"
+                }
+            }
+        },
         "api": {
             "auth": {
-                "logout": "Successful logout"
+                "logout": "You have logged out successfully."
+            }
+        },
+        "attachments": {
+            "plural": "Attachments",
+            "empty": "There are no attachments",
+            "actions": {
+                "list": "List All Attachments",
+                "create": "Add Attachment",
+                "save": "Save"
+            },
+            "attributes": {
+                "name": "Name",
+                "attachment": "Attachment"
+            },
+            "messages": {
+                "created": "The attachment has been added successfully.",
+                "deleted": "The attachment has been deleted successfully."
+            },
+            "dialogs": {
+                "delete": {
+                    "title": "Alert !",
+                    "info": "Are you sure you want to delete this attachment ?",
+                    "confirm": "Delete",
+                    "cancel": "Cancel"
+                }
             }
         },
         "auth": {
@@ -1027,7 +1099,8 @@ export default {
             "plural": "Campaigns",
             "singular": "CampaignResource",
             "empty": "There are no campaigns",
-            "perPage": "Count Campaigns Per Page",
+            "perPage": "Campaigns Per Page",
+            "select": "Select a campaign",
             "actions": {
                 "list": "List Campaigns",
                 "show": "Show Campaigns",
@@ -1048,11 +1121,13 @@ export default {
                 "customer_id": "Customer",
                 "target": "Target",
                 "status": "Status",
-                "budget": "Budget"
+                "budget": "Budget",
+                "attachments": "Attachments",
+                "created_at": "Created At"
             },
             "types": {
                 "completed": "Completed",
-                "ongoing": "Ongoing"
+                "ongoing": "Proccessing"
             },
             "dialogs": {
                 "delete": {
@@ -1149,8 +1224,266 @@ export default {
                 }
             }
         },
+        "customers": {
+            "plural": "Customers",
+            "singular": "Customer",
+            "empty": "There are no customers",
+            "select": "Select customer",
+            "select-type": "All",
+            "perPage": "Customers per page",
+            "wallet": "Wallet",
+            "total": "Total Wallet",
+            "payed": "Total Payed",
+            "purchases": "Total Purchases",
+            "remaining": "Remaining",
+            "actions": {
+                "list": "List customers",
+                "show": "Show",
+                "create": "Create new customer",
+                "edit": "Edit customer",
+                "avatar": "Change avatar",
+                "delete": "Delete customer",
+                "save": "Save",
+                "filter": "Filter",
+                "password": "Change password"
+            },
+            "messages": {
+                "created": "The customer has been created successfully .",
+                "updated": "The customer has been updated successfully .",
+                "deleted": "The customer has been deleted successfully .",
+                "activated": "The customer has been activated successfully .",
+                "deactivated": "The customer has been deactivated successfully ."
+            },
+            "attributes": {
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone",
+                "password": "Passwod",
+                "password_confirmation": "Password confirmation",
+                "avatar": "Avatar",
+                "attachments": "Attachments",
+                "country_id": "Country",
+                "city_id": "City",
+                "manager_id": "Manager",
+                "employee_id": "Employee",
+                "status": "Status",
+                "settings": "Settings",
+                "old_password": "Old Password"
+            },
+            "status": {
+                "activated": "Activated",
+                "deactivated": "Deactivated"
+            },
+            "settings": {
+                "tasks_is_active": "Tasks",
+                "campaigns_is_active": "Campaigns",
+                "schedules_is_active": "Schedules"
+            },
+            "dialogs": {
+                "delete": {
+                    "title": "Warning !",
+                    "info": "Are you sure you want to delete this customer ?",
+                    "confirm": "Delete",
+                    "cancel": "Cancel"
+                },
+                "attach": {
+                    "title": "Add {name}",
+                    "confirm": "Confirm",
+                    "cancel": "Cancel"
+                },
+                "detach": {
+                    "title": "Warning !",
+                    "info": "Are you sure you want to delete this package ?",
+                    "confirm": "Delete",
+                    "cancel": "Cancel"
+                },
+                "activate": {
+                    "title": "Warning !",
+                    "info": "Are you sure you want to activate this customer ?",
+                    "confirm": "Confirm",
+                    "cancel": "Cancel"
+                },
+                "deactivate": {
+                    "title": "Warning !",
+                    "info": "Are you sure you want to deactivate this customer ?",
+                    "confirm": "Confirm",
+                    "cancel": "Cancel"
+                }
+            },
+            "alerts": {
+                "email": "If you change your email, you will need to activate it again.",
+                "packages": "You have not subscribed to any package, you can talk to the account manager to subscribe to one of the packages"
+            }
+        },
         "dashboard": {
             "home": "Dashboard"
+        },
+        "employees": {
+            "plural": "موظفين",
+            "singular": "الموظف",
+            "empty": "لا يوجد مدراء",
+            "select": "اختر الموظف",
+            "select-type": "الكل",
+            "perPage": "عدد موظفين في الصفحة",
+            "actions": {
+                "list": "عرض موظفين ",
+                "show": "عرض",
+                "create": "إضافة موظف جديد",
+                "edit": "تعديل  الموظف",
+                "delete": "حذف الموظف",
+                "save": "حفظ",
+                "filter": "بحث"
+            },
+            "messages": {
+                "created": "تم إضافة الموظف بنجاح .",
+                "updated": "تم تعديل الموظف بنجاح .",
+                "deleted": "تم حذف الموظف بنجاح ."
+            },
+            "attributes": {
+                "name": "اسم الموظف",
+                "email": "البريد الالكترونى",
+                "phone": "رقم الهاتف",
+                "password": "كلمة السر",
+                "password_confirmation": "تأكيد كلمة السر",
+                "avatar": "الصورة الشخصية"
+            },
+            "dialogs": {
+                "delete": {
+                    "title": "تحذير !",
+                    "info": "هل أنت متأكد انك تريد حذف هذا الموظف ?",
+                    "confirm": "حذف",
+                    "cancel": "إلغاء"
+                }
+            }
+        },
+        "frontend": {
+            "welcome": "Welcome {user}",
+            "or": "or",
+            "pages": {
+                "login": "Login",
+                "app": "Home",
+                "dashboard": "Dashboard"
+            },
+            "dashboard": {
+                "messages": "Staff Messages",
+                "manager": "Your account manager"
+            },
+            "footer": {
+                "copyright": "All rights reserved 2022"
+            },
+            "actions": {
+                "title": "Actions",
+                "download_plan": "Download Plan",
+                "select_files": "Select Files",
+                "logout": "Logout"
+            },
+            "menus": {
+                "dashboard": "Dashboard",
+                "chat": "Chat",
+                "account": "Account",
+                "settings": "Settings"
+            },
+            "loading": "Loading ...",
+            "change_status": "Change Status",
+            "features": [
+                {
+                    "icon": "/images/icons/code.svg",
+                    "title": "Innovation starts with us",
+                    "description": ""
+                },
+                {
+                    "icon": "/images/icons/bag.svg",
+                    "title": "E-Commerce",
+                    "description": ""
+                },
+                {
+                    "icon": "/images/icons/phone.svg",
+                    "title": "Mobile Applications",
+                    "description": ""
+                },
+                {
+                    "icon": "/images/icons/bezier-curve.svg",
+                    "title": "Your brand is your identity!",
+                    "description": ""
+                }
+            ]
+        },
+        "global": {
+            "select-all": "Select All",
+            "contact_us": "Contact Us",
+            "now": "Now",
+            "language": "Language"
+        },
+        "logs": {
+            "plural": "Logs",
+            "singular": "Log",
+            "empty": "There are no logs available",
+            "select": "Select",
+            "sentences": {
+                "create": "{name} created it at {time}",
+                "update": "{name} changed the status to {status} at {time}"
+            },
+            "perPage": "Logs per page",
+            "actions": {
+                "list": "List all logs",
+                "filter": "Filter"
+            }
+        },
+        "messages": {
+            "plural": "Messages",
+            "singular": "Message",
+            "empty": "There are no messages available.",
+            "actions": {
+                "list": "List messages",
+                "show": "Show",
+                "send": "Send",
+                "filter": "Filter",
+                "create": "Create new message",
+                "reply": "Reply"
+            },
+            "messages": {
+                "created": "Th message has been created successfully"
+            },
+            "attributes": {
+                "title": "Title",
+                "body": "Content"
+            }
+        },
+        "notifications": {
+            "singular": "Notification",
+            "plural": "Notifications",
+            "empty": "There are no notifications.",
+            "tasks": {
+                "body": "{user} added a new task titled {title}",
+                "status": {
+                    "ongoing": "Task \"{title}\" status changed to ONGOING",
+                    "completed": "Task \"{title}\" status changed to COMPLETED"
+                }
+            },
+            "campaigns": {
+                "body": "{user} added a new campaign titled {title}",
+                "status": {
+                    "ongoing": "Campaign \"{title}\" status changed to ONGOING",
+                    "completed": "Campaign \"{title}\" status changed to COMPLETED"
+                }
+            },
+            "schedules": {
+                "body": "{user} added a new schedule titled {title}",
+                "status": {
+                    "ongoing": "Schedule \"{title}\" status changed to ONGOING",
+                    "completed": "Schedule \"{title}\" status changed to COMPLETED"
+                }
+            },
+            "messages": {
+                "body": "{user} replied to your comment"
+            }
+        },
+        "package_features": {
+            "plural": "Package Features",
+            "singular": "Package Feature",
+            "actions": {
+                "show": "Features of {name}"
+            }
         },
         "packages": {
             "plural": "Packages",
@@ -1164,7 +1497,8 @@ export default {
                 "edit": "Edit Package",
                 "delete": "Delete Package",
                 "save": "Save",
-                "filter": "Filter"
+                "filter": "Filter",
+                "subscription": "Subscribe to the package"
             },
             "messages": {
                 "created": "The package has been created successfully.",
@@ -1173,6 +1507,7 @@ export default {
             },
             "attributes": {
                 "name": "Package name",
+                "%name%": "Package name",
                 "price": "Package price"
             },
             "dialogs": {
@@ -1195,10 +1530,25 @@ export default {
             "token": "This password reset token is invalid.",
             "user": "We can't find a user with that e-mail address."
         },
+        "reports": {
+            "plural": "Reports",
+            "singular": "Report",
+            "empty": "There are no reports.",
+            "actions": {
+                "financial": "Financial",
+                "arrears": "Arrears",
+                "customers": "Customers",
+                "transactions": "Transactions",
+                "show": "Show",
+                "cancel": "Cancel",
+                "filter": "Filter"
+            }
+        },
         "schedules": {
             "plural": "Schedules",
             "singular": "Schedule",
             "empty": "There are no schedules",
+            "select": "Select a schedule",
             "perPage": "Count Schedules Per Page",
             "actions": {
                 "list": "List Schedules",
@@ -1218,7 +1568,9 @@ export default {
                 "name": "Schedule name",
                 "description": "Description",
                 "status": "Status",
-                "customer_id": "Customer"
+                "customer_id": "Customer",
+                "attachments": "Attachments",
+                "created_at": "Created At"
             },
             "types": {
                 "completed": "Completed",
@@ -1233,10 +1585,94 @@ export default {
                 }
             }
         },
+        "select2": {
+            "errorLoading": "The results could not be loaded.",
+            "inputTooLong": "Please delete {overChars} characters",
+            "inputTooShort": "Please enter {remainingChars} characters",
+            "loadingMore": "Loading more results…",
+            "maximumSelected": "You can only select {maximum} items",
+            "noResults": "No results found",
+            "searching": "Searching …",
+            "removeAllItems": "Remove all items"
+        },
+        "settings": {
+            "plural": "Settings",
+            "actions": {
+                "list": "Settings",
+                "save": "Save"
+            },
+            "attributes": {
+                "title": "Title",
+                "copyright": "Copyrights",
+                "facebook": "Facebook",
+                "twitter": "Twitter",
+                "instagram": "Instagram",
+                "youtube": "Youtube",
+                "contact_us_link": "Contact Us",
+                "logo": "Logo",
+                "favicon": "Favicon",
+                "phone": "Phone"
+            },
+            "messages": {
+                "updated": "The settings have been updated successfully."
+            }
+        },
+        "statistics": {
+            "customers": "Customers",
+            "supervisors": "Supervisors",
+            "employees": "Employees",
+            "tasks": "Tasks",
+            "schedules": "Schedules",
+            "campaigns": "Campaigns",
+            "total_payed": "Payed",
+            "total_remaining": "Remainings",
+            "actions": {
+                "more": "More"
+            }
+        },
+        "supervisors": {
+            "plural": "مدراء الحسابات",
+            "singular": "مدير الحساب",
+            "empty": "لا يوجد مدراء حسابات",
+            "select": "اختر مدير الحساب",
+            "select-type": "الكل",
+            "perPage": "عدد مدراء الحسابات في الصفحة",
+            "actions": {
+                "list": "عرض مدراء الحسابات ",
+                "show": "عرض",
+                "create": "إضافة مدير حسابات جديد",
+                "edit": "تعديل  مدير الحساب",
+                "delete": "حذف مدير الحساب",
+                "save": "حفظ",
+                "filter": "بحث"
+            },
+            "messages": {
+                "created": "تم إضافة مدير الحساب بنجاح .",
+                "updated": "تم تعديل مدير الحساب بنجاح .",
+                "deleted": "تم حذف مدير الحساب بنجاح ."
+            },
+            "attributes": {
+                "name": "اسم مدير الحساب",
+                "email": "البريد الالكترونى",
+                "phone": "رقم الهاتف",
+                "password": "كلمة السر",
+                "password_confirmation": "تأكيد كلمة السر",
+                "avatar": "الصورة الشخصية"
+            },
+            "dialogs": {
+                "delete": {
+                    "title": "تحذير !",
+                    "info": "هل أنت متأكد انك تريد حذف هذا مدير الحساب ?",
+                    "confirm": "حذف",
+                    "cancel": "إلغاء"
+                }
+            }
+        },
         "tasks": {
             "plural": "Tasks",
             "singular": "Task",
             "empty": "There are no tasks",
+            "select": "Select a task",
             "perPage": "Count Tasks Per Page",
             "actions": {
                 "list": "List Tasks",
@@ -1256,7 +1692,9 @@ export default {
                 "name": "Task name",
                 "description": "Description",
                 "status": "Status",
-                "customer_id": "Customer"
+                "customer_id": "Customer",
+                "attachments": "Attachments",
+                "created_at": "Created At"
             },
             "types": {
                 "completed": "Completed",
@@ -1275,24 +1713,32 @@ export default {
             "plural": "Transactions",
             "singular": "Transaction",
             "empty": "There are no transactions",
+            "empty_note": "There is no note",
+            "select": "Select Transaction",
+            "perPage": "Transactions per page",
+            "receipt_empty": "No Receipt",
             "actions": {
-                "list": "List Transactions",
-                "show": "Show Transaction",
-                "create": "Create a new transaction",
+                "list": "Transactions",
+                "show": "Show",
+                "create": "Create a Transaction",
                 "edit": "Edit Transaction",
                 "delete": "Delete Transaction",
-                "save": "Save"
+                "save": "Save",
+                "filter": "Filter"
             },
             "messages": {
-                "created": "The transaction has been created successfully.",
-                "updated": "The transaction has been updated successfully.",
-                "deleted": "The transaction has been deleted successfully."
+                "created": "The transaction has been created successfully .",
+                "updated": "The transaction has been updated successfully .",
+                "deleted": "The transaction has been deleted successfully ."
             },
             "attributes": {
                 "amount": "Amount",
                 "customer_id": "Customer",
-                "note": "Note",
-                "payment_type": "Payment Type"
+                "actor_id": "By",
+                "payment_type": "Method",
+                "receipt": "Receipt",
+                "note": "Notes",
+                "date": "Date"
             },
             "dialogs": {
                 "delete": {
@@ -1311,58 +1757,19 @@ export default {
             "select-type": "All",
             "perPage": "Count Users Per Page",
             "wallet": "Wallet",
+            "since": "Since {date}",
+            "profile": "Profile",
             "actions": {
-                "list": "List Users",
-                "show": "Show User",
-                "create": "Create a new user",
-                "edit": "Edit User",
-                "delete": "Delete User",
-                "save": "Save",
                 "filter": "Filter"
             },
-            "messages": {
-                "created": "The user has been created successfully.",
-                "updated": "The user has been updated successfully.",
-                "deleted": "The user has been deleted successfully."
-            },
-            "attributes": {
-                "name": "Name",
-                "email": "Email",
-                "phone": "Phone",
-                "password": "Password",
-                "password_confirmation": "Password Confirmation",
-                "type": "User Type",
-                "avatar": "Avatar",
-                "strategy_plan": "Strategy Plan",
-                "strategy_plan_file": "Strategy Plan File",
-                "city_id": "City",
-                "manager_id": "Account Manager",
-                "employee_id": "Employee"
+            "alerts": {
+                "registered": "Thank you for your registration. We kindly ask you to speak with the account manager through the chat in, to set up your account based on your requirements."
             },
             "types": {
                 "supervisor": "Account Manager",
                 "admin": "Admin",
                 "employee": "Employee",
                 "customer": "Customer"
-            },
-            "dialogs": {
-                "delete": {
-                    "title": "Warning !",
-                    "info": "Are you sure you want to delete the user ?",
-                    "confirm": "Delete",
-                    "cancel": "Cancel"
-                },
-                "attach": {
-                    "title": "Attach {name}",
-                    "confirm": "Attach",
-                    "cancel": "Cancel"
-                },
-                "detach": {
-                    "title": "Warning !",
-                    "info": "Are you sure you want to detach this package from this user ?",
-                    "confirm": "Detach",
-                    "cancel": "Cancel"
-                }
             }
         },
         "validation": {
@@ -1476,6 +1883,14 @@ export default {
                 }
             },
             "attributes": []
+        },
+        "verifications": {
+            "email": {
+                "title": "Step left!",
+                "description": "To complete your membership with us in Rezkonline, please click on the link to activate your account that you received on your email.",
+                "success": "The activation link has been sent to your email",
+                "resend": "Resend the activation link"
+            }
         }
     }
 }

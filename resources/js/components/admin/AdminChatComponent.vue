@@ -63,7 +63,7 @@ export default {
         scrollTop: 9999999999999
     }, 1000);
 
-    Echo.private('chat.' + this.authId)
+    window.Echo.private('chat.' + this.authId)
         .listen('MessageSentEvent', (e) => {
             this.messages.push(e);
         });
