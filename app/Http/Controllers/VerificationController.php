@@ -9,7 +9,7 @@ class VerificationController extends Controller
 {
     /**
      * Verify email form.
-     * 
+     *
      * @return \Illuminate\Http\Response
      */
     public function email()
@@ -17,13 +17,13 @@ class VerificationController extends Controller
         if (auth()->user()->hasVerifiedEmail()) {
             return abort(404);
         }
-        
+
         return view('auth.verify');
     }
 
     /**
      * Resend user's email verification link.
-     * 
+     *
      * @param \Illuminate\Http\Request
      * @return \Illuminate\Http\Response
      */
@@ -36,7 +36,7 @@ class VerificationController extends Controller
 
     /**
      * Mark user's email as verified.
-     * 
+     *
      * @param EmailVerificationRequest $request
      * @return \Illuminate\Http\Response
      */
@@ -46,6 +46,6 @@ class VerificationController extends Controller
 
         flash(trans('users.messages.email_verified'))->success();
 
-        return redirect()->route('website.index');
+        return redirect()->route('home');
     }
 }
