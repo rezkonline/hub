@@ -8,6 +8,7 @@ use App\Events\TaskCreatedEvent;
 use App\Events\CampaignStatusEvent;
 use App\Events\ScheduleStatusEvent;
 use App\Events\CampaignCreatedEvent;
+use App\Events\MeetingCreatedEvent;
 use App\Events\ScheduleCreatedEvent;
 use App\Listeners\TaskStatusListener;
 use App\Listeners\MessageSentListener;
@@ -16,6 +17,7 @@ use Illuminate\Auth\Events\Registered;
 use App\Listeners\CampaignStatusListener;
 use App\Listeners\ScheduleStatusListener;
 use App\Listeners\CampaignCreatedListener;
+use App\Listeners\MeetingCreatedListener;
 use App\Listeners\ScheduleCreatedListener;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -51,6 +53,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         MessageSentEvent::class => [
             MessageSentListener::class,
+        ],
+        MeetingCreatedEvent::class => [
+            MeetingCreatedListener::class,
         ],
     ];
 

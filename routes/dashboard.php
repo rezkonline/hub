@@ -31,6 +31,7 @@ Route::resources([
     'users' => 'UserController',
     'countries' => 'CountryController',
     'packages' => 'PackageController',
+    'meetings' => 'MeetingController',
 ]);
 
 Route::resource('cities', 'CityController')->except('index', 'create', 'store');

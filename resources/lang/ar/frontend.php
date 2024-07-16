@@ -24,7 +24,7 @@ return [
     'menus' => [
         'dashboard' => 'لوحة التحكم',
         'chat' => 'الشات',
-        'account' => 'حسابي',
+        'meeting' => 'الإجتماعات',
         'settings' => 'الإعدادات',
     ],
     'loading' => 'جاري التحميل ...',

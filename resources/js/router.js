@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import App from "./components/pages/App";
 import IndexDashboard from "./components/dashboard/IndexDashboard";
 import ChatComponent from "./components/dashboard/ChatComponent";
+import MeetingComponent from "./components/dashboard/MeetingComponent";
 import SettingsComponent from "./components/dashboard/SettingsComponent";
 
 // Routes
@@ -19,6 +20,15 @@ const routes = [
                 meta: {
                     auth: true,
                     title: 'frontend.menus.chat',
+                }
+            },
+            {
+                path: 'meeting',
+                name: 'meeting',
+                component: MeetingComponent,
+                meta: {
+                    auth: true,
+                    title: 'frontend.menus.meeting',
                 }
             },
             {

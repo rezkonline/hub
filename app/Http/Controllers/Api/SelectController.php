@@ -10,6 +10,7 @@ use App\Models\Supervisor;
 use App\Http\Filters\SelectFilter;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\SelectResource;
+use App\Models\Customer;
 
 class SelectController extends Controller
 {
@@ -63,6 +64,19 @@ class SelectController extends Controller
         $employees = Employee::filter($filter)->paginate();
 
         return SelectResource::collection($employees);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @param   \App\Http\Filters\SelectFilter  $filter
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function customers(SelectFilter $filter)
+    {
+        $customers = Customer::filter($filter)->paginate();
+
+        return SelectResource::collection($customers);
     }
 
     /**

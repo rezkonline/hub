@@ -26,6 +26,7 @@
         </div>
 
         <!-- Scripts -->
+        <script src="https://8x8.vc/vpaas-magic-cookie-bcfb0175ebb6471fae1140ce02ed4540/external_api.js" async></script>
         <script src="{{ asset(mix('js/app.js')) }}" type="text/javascript"></script>
         @stack('scripts')
     </body>

@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('cities/select', 'SelectController@cities')->name('cities.select');
     Route::get('supervisors/select', 'SelectController@supervisors')->name('supervisors.select');
     Route::get('employees/select', 'SelectController@employees')->name('employees.select');
+    Route::get('customers/select', 'SelectController@customers')->name('customers.select');
     Route::get('packages/select', 'SelectController@packages')->name('packages.select');
 
     $routes = [
@@ -58,6 +59,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('notifications/count', 'NotificationController@count')->name('notifications.count');
     Route::get('notifications', 'NotificationController@index')->name('notifications.index');
+
+    Route::get('meeting', 'MeetingController@show')->name('meeting.show');
 });
 
 Route::post('cities', 'CityController@index')->name('cities.index');

@@ -2,5 +2,6 @@
     "i18n-ally.localesPaths": [
         "resources/lang",
         "resources/views/dashboard/messages"
-    ]
+    ],
+    "i18n-ally.keystyle": "nested"
 }

@@ -12,6 +12,7 @@
     @include('dashboard.users.partials.actions.sidebar')
     @include('dashboard.countries.partials.actions.sidebar')
     @include('dashboard.packages.partials.actions.sidebar')
+    @include('dashboard.meetings.partials.actions.sidebar')
     @include('dashboard.tasks.partials.actions.sidebar')
     @include('dashboard.campaigns.partials.actions.sidebar')
     @include('dashboard.schedules.partials.actions.sidebar')

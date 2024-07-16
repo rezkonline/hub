@@ -34,6 +34,8 @@ import FileUploader from 'laravel-file-uploader'
  */
 
 import Echo from 'laravel-echo'
+import VueFlatPickr from 'vue-flatpickr-component'
+import 'flatpickr/dist/flatpickr.css'
 
 window.Pusher = require('pusher-js');
 
@@ -53,6 +55,7 @@ window.Echo = new Echo({
 
 window.Vue = require('vue');
 
+Vue.use(VueFlatPickr)
 Vue.use(VueInternationalization)
 
 const lang = document.documentElement.lang.substr(0, 2)

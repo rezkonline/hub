@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Events\MeetingCreatedEvent;
 use App\Notifications\TaskStatusNotifications;
 use App\Notifications\MessageSentNotifications;
 use App\Notifications\TaskCreatedNotifications;
@@ -71,6 +72,12 @@ class NotificationResource extends JsonResource
                     'id' => '',
                     'url' => route('dashboard.users.messages.index', $this->user_id),
                 ];
+            case MeetingCreatedEvent::class:
+                $view = [
+                    'type' => 'meeting',
+                    'id' => '',
+                    'url' => route('dashboard.meeting.show', $this->meeting_id),
+                ];
                 break;
         }
 
@@ -95,7 +102,7 @@ class NotificationResource extends JsonResource
         }
 
         return trans($this->data['body'], array_merge([
-            'user' => $this->user->name,
+            'user' => $this->user?->name,
         ], isset($this->data['localed_data']) ? $this->data['localed_data'] : []));
     }
 }
