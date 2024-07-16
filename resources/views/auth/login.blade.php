@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="auth-form col-md-6 col-sm-12">
                     <div class="d-flex align-items-left justify-content-left mb-3 mb-lg-4">
-                        <img class="img-h75 mb-0" src="{{ asset('images/logo.png') }}" alt="@lang('adminlte.auth.login.title')">
+                        <img class="img-h75 mb-0" src="{{ app_logo() }}" alt="@lang('adminlte.auth.login.title')">
                     </div>
                     <h2 class="text-primary font-weight-600 mb-3">
                         @lang('adminlte.auth.login.title')
