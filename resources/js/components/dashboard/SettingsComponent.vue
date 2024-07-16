@@ -9,7 +9,7 @@
                 </div>
                 <div class="block__box--content p-2 p-md-3 p-lg-4">
                     <div class="row mb-4">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 m-auto">
                             <validation-observer v-slot="{ handleSubmit }">
                                 <form @submit.prevent="handleSubmit(updateUser)">
                                     <div class="row">
@@ -79,37 +79,10 @@
                                 </form>
                             </validation-observer>
                         </div>
-                        <div class="col-lg-6">
-                            <h3>{{ $t('packages.plural') }}</h3>
-                            <div v-for="pack in packages" :key="pack.id" @click="selectPackage(pack)" class="bg-white shadow-sm rounded p-4 d-md-flex align-items-center justify-content-between mb-3 mb-lg-0 cursor-pointer">
-                                <p class="font-18 mb-2 mb-md-0">
-                                    {{ pack.name }} (#{{ pack.id }})
-                                </p>
-                                <p class="font-15 font-md-22 m-0 font-w700 text-primary">
-                                    {{ pack.created_at_formatted }}
-                                </p>
-                            </div>
-                            <div class="alert alert-warning" v-if="!packages.length">
-                                {{ $t('customers.alerts.packages') }}
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <modal name="package-modal" height="auto" v-if="Object.keys(pack).length">
-            <div class="p-3 p-lg-5">
-                <h4 class="font-18 mb-1 text-primary">{{ $t('package_features.actions.show', { name: pack.name }) }}</h4>
-                <div class="singlecontentbg">
-                    <ul>
-                        <li>Hello</li>
-                    </ul>
-                </div>
-                <div class="mt-4 text-left">
-                    <button class="btn btn-primary btn-lg btn-mw150 rounded" @click="$modal.hide('package-modal')">اغلاق</button>
-                </div>
-            </div>
-        </modal>
     </div>
 </template>
 
@@ -125,9 +98,7 @@ export default {
             old_password: '',
             password: '',
             password_confirmation: '',
-            packages: [],
             errors: [],
-            pack: {},
         }
     },
     async mounted() {
@@ -137,8 +108,6 @@ export default {
         this.name = this.$store.state.user.name
         this.email = this.$store.state.user.email
         this.phone = this.$store.state.user.phone
-
-        await this.getPackages()
     },
     methods: {
         async updateUser() {
@@ -159,11 +128,6 @@ export default {
                 this.loading = false
             }).catch((e) => {
                 this.errors = e.response.data.errors
-            })
-        },
-        async getPackages() {
-            await this.axios.get('user/packages').then((response) => {
-                this.packages = response.data.data
             })
         },
         uploadAvatar() {
@@ -189,10 +153,6 @@ export default {
             this.password = ''
             this.password_confirmation = ''
         },
-        selectPackage(pack) {
-            this.pack = pack
-            this.$modal.show('package-modal')
-        }
     },
 }
 </script>

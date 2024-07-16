@@ -29,7 +29,7 @@
                 <rect x="75" y="37" rx="4" ry="4" width="50" height="10" />
             </vue-content-loading>
 
-            <div class="block__post block__post--admin position-relative mb-2 shadow-sm hoverrounded p-2 border d-block" v-if="messages.length > 0 && !loader" v-for="message in messages">
+            <div class="block__post block__post--admin position-relative mb-2 shadow-sm hoverrounded p-2 border d-block" v-if="messages.length > 0 && !loader" v-for="message in messages" :key="message.id">
                 <div class="row row-p4 align-items-center" @click="$modal.show('message', { message: message })">
                     <div class="col-md-2">
                         <img class="imgs rounded-circle mb-24 mb-md-0" :src="message.sender.avatar" :alt="message.sender.name">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="block__post block__post--admin position-relative mb-2 shadow-sm hoverrounded p-2 border d-block" v-if="loader" v-for="index in 4">
+            <div class="block__post block__post--admin position-relative mb-2 shadow-sm hoverrounded p-2 border d-block" v-if="loader" v-for="index in 4" :key="index">
                 <vue-content-loading :width="300" :height="75" :rtl="rtl">
                     <circle cx="30" cy="30" r="30" />
                     <rect x="75" y="13" rx="4" ry="4" width="100" height="15" />

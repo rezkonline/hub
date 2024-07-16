@@ -22,4 +22,4 @@ Route::get('email/verify', 'VerificationController@email')->middleware('auth')->
 Route::get('email/verify/{id}/{hash}', 'VerificationController@markEmailAsVerified')->middleware(['auth', 'signed'])->name('verification.verify');
 Route::post('email/verification-notification', 'VerificationController@resendEmail')->middleware(['auth', 'throttle:6,1'])->name('verification.resend');
 
-Route::get('/{any?}', 'HomeController@index')->where('any', '^(?!dashboard|api|storage|broadcasting|lang)[\/\w\.-]*')->name('home')->middleware(['auth', 'verified']);
+Route::get('/{any?}', 'HomeController@index')->where('any', '^(?!dashboard|api|storage|broadcasting|lang)[\/\w\.-]*')->name('home')->middleware(['auth']);

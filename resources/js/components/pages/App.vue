@@ -17,9 +17,6 @@
                 <li :class="$route.name === 'chat' ? 'active' : ''" v-if="$store.state.user.impersonator === null || typeof $store.state.user.impersonator === 'undefined' || $store.state.user.impersonator.type !== 'employee'">
                     <router-link :to="{ name: 'chat' }"><i class="far fa-comment-dots d-md-block mb-md-2 mr-2 mr-md-0 font-16 font-lg-24"></i> {{ $t('frontend.menus.chat') }}</router-link>
                 </li>
-                <li :class="$route.name === 'account' ? 'active' : ''" v-if="$store.state.user.impersonator === null || typeof $store.state.user.impersonator === 'undefined' || $store.state.user.impersonator.type !== 'employee'">
-                    <router-link :to="{ name: 'account' }"><i class="far fa-user d-md-block mb-md-2 mr-2 mr-md-0 font-16 font-lg-24"></i> {{ $t('frontend.menus.account') }}</router-link>
-                </li>
                 <li :class="$route.name === 'settings' ? 'active' : ''" v-if="$store.state.user.impersonator === null || typeof $store.state.user.impersonator === 'undefined' || $store.state.user.impersonator.type !== 'employee'">
                     <router-link :to="{ name: 'settings' }"><i class="far fa-cog d-md-block mb-md-2 mr-2 mr-md-0 font-16 font-lg-24"></i> {{ $t('frontend.menus.settings') }}</router-link>
                 </li>

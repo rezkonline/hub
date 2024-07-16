@@ -4,7 +4,6 @@ import VueRouter from 'vue-router'
 import App from "./components/pages/App";
 import IndexDashboard from "./components/dashboard/IndexDashboard";
 import ChatComponent from "./components/dashboard/ChatComponent";
-import AccountComponent from "./components/dashboard/AccountComponent";
 import SettingsComponent from "./components/dashboard/SettingsComponent";
 
 // Routes
@@ -20,15 +19,6 @@ const routes = [
                 meta: {
                     auth: true,
                     title: 'frontend.menus.chat',
-                }
-            },
-            {
-                path: 'account',
-                name: 'account',
-                component: AccountComponent,
-                meta: {
-                    auth: true,
-                    title: 'frontend.menus.account',
                 }
             },
             {

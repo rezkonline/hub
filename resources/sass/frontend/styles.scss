@@ -57,21 +57,21 @@ $facebook: #4267B2;
 
 .block__menusfixed--menus .list li {
   a {
-    background-color: #0dace6;
-    background-image: -webkit-linear-gradient(right, #fff, #fff, #1dc3ff, #0dace6);
-    background-image: -o-linear-gradient(right, #fff, #fff, #1dc3ff, #0dace6);
-    background-image: linear-gradient(to left, #fff, #fff, #1dc3ff, #0dace6);
+    background-color: #088395;
+    background-image: -webkit-linear-gradient(right, #fff, #fff, #37B7C3, #088395);
+    background-image: -o-linear-gradient(right, #fff, #fff, #37B7C3, #088395);
+    background-image: linear-gradient(to left, #fff, #fff, #37B7C3, #088395);
     background-size: 300% 100%;
 
     &:hover {
       background-position: 0% 0;
-      background-color: #1dc3ff;
+      background-color: #37B7C3;
     }
   }
 
   &.active a {
     background-position: 0% 0;
-    background-color: #1dc3ff;
+    background-color: #37B7C3;
   }
 }
 
@@ -92,7 +92,7 @@ $facebook: #4267B2;
     line-height: 40px;
 
     &:hover {
-      color: #0dace6;
+      color: #088395;
     }
   }
 }
@@ -102,18 +102,18 @@ $facebook: #4267B2;
 }
 
 .bg-gradient {
-  background-color: #0dace6;
-  background-image: -webkit-linear-gradient(right, #1dc3ff, #0dace6);
-  background-image: -o-linear-gradient(right, #1dc3ff, #0dace6);
-  background-image: linear-gradient(to left, #1dc3ff, #0dace6);
+  background-color: #088395;
+  background-image: -webkit-linear-gradient(right, #37B7C3, #088395);
+  background-image: -o-linear-gradient(right, #37B7C3, #088395);
+  background-image: linear-gradient(to left, #37B7C3, #088395);
 }
 
 .table__lastoperations {
   thead {
-    background-color: #0dace6;
-    background-image: -webkit-linear-gradient(right, #1dc3ff, #0dace6);
-    background-image: -o-linear-gradient(right, #1dc3ff, #0dace6);
-    background-image: linear-gradient(to left, #1dc3ff, #0dace6);
+    background-color: #088395;
+    background-image: -webkit-linear-gradient(right, #37B7C3, #088395);
+    background-image: -o-linear-gradient(right, #37B7C3, #088395);
+    background-image: linear-gradient(to left, #37B7C3, #088395);
 
     tr th {
       text-align: center;
@@ -156,7 +156,7 @@ $facebook: #4267B2;
     background: #626262;
 
     &:hover {
-      background: #0dace6;
+      background: #088395;
     }
   }
 }
@@ -235,7 +235,7 @@ $facebook: #4267B2;
     }
 
     h3 {
-      color: #0dace6;
+      color: #088395;
     }
   }
 
@@ -321,33 +321,33 @@ button.text-white:hover {
   }
 
   .nav-item.show .nav-link {
-    border-color: #0dace6;
+    border-color: #088395;
     color: #fff;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-    background-color: #0dace6;
-    background-image: -webkit-linear-gradient(right, #1dc3ff, #0dace6);
-    background-image: -o-linear-gradient(right, #1dc3ff, #0dace6);
-    background-image: linear-gradient(to left, #1dc3ff, #0dace6);
+    background-color: #088395;
+    background-image: -webkit-linear-gradient(right, #37B7C3, #088395);
+    background-image: -o-linear-gradient(right, #37B7C3, #088395);
+    background-image: linear-gradient(to left, #37B7C3, #088395);
   }
 
   .nav-link {
     &.active, &:hover {
-      border-color: #0dace6;
+      border-color: #088395;
       color: #fff;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-      background-color: #0dace6;
-      background-image: -webkit-linear-gradient(right, #1dc3ff, #0dace6);
-      background-image: -o-linear-gradient(right, #1dc3ff, #0dace6);
-      background-image: linear-gradient(to left, #1dc3ff, #0dace6);
+      background-color: #088395;
+      background-image: -webkit-linear-gradient(right, #37B7C3, #088395);
+      background-image: -o-linear-gradient(right, #37B7C3, #088395);
+      background-image: linear-gradient(to left, #37B7C3, #088395);
     }
   }
 }
 
 .bg-grandient {
-  background-color: #0dace6;
-  background-image: -webkit-linear-gradient(right, #1dc3ff, #0dace6);
-  background-image: -o-linear-gradient(right, #1dc3ff, #0dace6);
-  background-image: linear-gradient(to left, #1dc3ff, #0dace6);
+  background-color: #088395;
+  background-image: -webkit-linear-gradient(right, #37B7C3, #088395);
+  background-image: -o-linear-gradient(right, #37B7C3, #088395);
+  background-image: linear-gradient(to left, #37B7C3, #088395);
 }
 
 .block__post img {
@@ -376,7 +376,7 @@ button.text-white:hover {
 
 .boxadminname img, .block__post--admin img {
   border: 3px solid #fff;
-  box-shadow: 0 0 0 2px #1dc3ff;
+  box-shadow: 0 0 0 2px #37B7C3;
 }
 
 .block__menusfixed--content--scrollbar {

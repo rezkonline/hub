@@ -7,16 +7,16 @@
                 </div>
             </div>
             <div class="col-lg-4 mb-3 mb-lg-0">
-                <ManagerComponent></ManagerComponent>
-                <AchievementComponent></AchievementComponent>
-                <AttachmentsComponent></AttachmentsComponent>
+                <ManagerComponent />
+                <AchievementComponent />
+                <AttachmentsComponent />
             </div>
             <div class="col-lg-4 mb-3 mb-lg-0">
-                <TaskComponent v-if="taskIsActive"></TaskComponent>
-                <CampaignComponent v-if="campaignIsActive"></CampaignComponent>
+                <TaskComponent v-if="taskIsActive" />
+                <CampaignComponent v-if="campaignIsActive" />
             </div>
             <div class="col-lg-4 mb-3 mb-lg-0">
-                <ScheduleComponent v-if="scheduleIsActive"></ScheduleComponent>
+                <ScheduleComponent v-if="scheduleIsActive" />
             </div>
         </div>
     </div>
