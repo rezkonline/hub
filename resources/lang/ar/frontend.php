@@ -30,9 +30,10 @@ return [
     'loading' => 'جاري التحميل ...',
     'change_status' => 'تغيير الحالة',
     'features' => [
-        [
-            'icon' => '/images/icons/code.svg',
-            'title' => 'الابتكار يبدأ معنا',
-        ],
+        // [
+        //     'icon' => '/images/icons/code.svg',
+        //     'title' => 'الابتكار يبدأ معنا',
+        //     'description' => 'سنساعدك في بناء تخطيط متكامل لفكرتك.',
+        // ],
     ],
 ];

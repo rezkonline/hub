@@ -52,17 +52,19 @@
     </section>
     <aside class="sidebar col-lg-6 col-md-6 col-sm-12 d-none d-md-block">
         <ul class="list-unstyled pl-0 pl-md-5">
-            @foreach(trans('frontend.features') as $feature)
-                <li class="media mb-54">
-                    <div class="bg-white rounded mr-3 p-3">
-                        <img src="{{ $feature['icon'] }}" class="img-fluid" alt="{{ $feature['title'] }}">
-                    </div>
-                    <div class="media-body font-weight-500 text-light">
-                        <h5 class="mt-0 mb-2 text-white font-weight-600">{{ $feature['title'] }}</h5>
-                        {{ $feature['description'] }}
-                    </div>
-                </li>
-            @endforeach
+            @if(is_array(trans('frontend.features')))
+                @foreach(trans('frontend.features') as $feature)
+                    <li class="media mb-54">
+                        <div class="bg-white rounded mr-3 p-3">
+                            <img src="{{ $feature['icon'] }}" class="img-fluid" alt="{{ $feature['title'] }}">
+                        </div>
+                        <div class="media-body font-weight-500 text-light">
+                            <h5 class="mt-0 mb-2 text-white font-weight-600">{{ $feature['title'] }}</h5>
+                            {{ $feature['description'] }}
+                        </div>
+                    </li>
+                @endforeach
+            @endif
         </ul>
     </aside>
 @endsection

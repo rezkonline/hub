@@ -88,7 +88,7 @@ class UserRequest extends FormRequest
             'country_id' => ['required_if:type,'.User::CUSTOMER_TYPE, 'exists:countries,id'],
             'city_id' => ['required_if:type,'.User::CUSTOMER_TYPE, 'exists:cities,id'],
             'manager_id' => ['required_if:type,'.User::CUSTOMER_TYPE, 'exists:users,id'],
-            'employee_id' => ['required_if:type,'.User::CUSTOMER_TYPE, 'exists:users,id'],
+            // 'employee_id' => ['required_if:type,'.User::CUSTOMER_TYPE, 'exists:users,id'],
             'attachments' => ['nullable', 'array'],
             'attachments.*' => ['nullable', 'file'],
             'settings' => ['nullable', 'array'],
